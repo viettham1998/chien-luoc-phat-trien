@@ -1,0 +1,1573 @@
+{
+ "units": [
+  {
+   "code": "CNTT",
+   "name": "Khoa Công nghệ thông tin",
+   "type": "Khoa"
+  },
+  {
+   "code": "ĐC",
+   "name": "Khoa Địa chất",
+   "type": "Khoa"
+  },
+  {
+   "code": "ĐTVT",
+   "name": "Khoa Điện tử - Viễn thông",
+   "type": "Khoa"
+  },
+  {
+   "code": "HH",
+   "name": "Khoa Hóa học",
+   "type": "Khoa"
+  },
+  {
+   "code": "KHLN",
+   "name": "Khoa Khoa học liên ngành",
+   "type": "Khoa"
+  },
+  {
+   "code": "CNVL",
+   "name": "Khoa Khoa học và Công nghệ Vật liệu",
+   "type": "Khoa"
+  },
+  {
+   "code": "MT",
+   "name": "Khoa Môi trường",
+   "type": "Khoa"
+  },
+  {
+   "code": "CNSH",
+   "name": "Khoa Sinh học - Công nghệ Sinh học",
+   "type": "Khoa"
+  },
+  {
+   "code": "TTH",
+   "name": "Khoa Toán - Tin học",
+   "type": "Khoa"
+  },
+  {
+   "code": "VLKT",
+   "name": "Khoa Vật lý - Vật lý Kỹ thuật",
+   "type": "Khoa"
+  },
+  {
+   "code": "TCHC",
+   "name": "Phòng Tổ chức - Hành chính",
+   "type": "Phòng"
+  },
+  {
+   "code": "ĐT",
+   "name": "Phòng Đào tạo",
+   "type": "Phòng"
+  },
+  {
+   "code": "SĐH",
+   "name": "Phòng Đào tạo Sau Đại học",
+   "type": "Phòng"
+  },
+  {
+   "code": "CTSV",
+   "name": "Phòng Công tác Sinh viên",
+   "type": "Phòng"
+  },
+  {
+   "code": "KHTC",
+   "name": "Phòng Kế hoạch - Tài chính",
+   "type": "Phòng"
+  },
+  {
+   "code": "ĐBCL",
+   "name": "Phòng Khảo thí và Đảm bảo Chất lượng",
+   "type": "Phòng"
+  },
+  {
+   "code": "KHCN",
+   "name": "Phòng Khoa học Công nghệ",
+   "type": "Phòng"
+  },
+  {
+   "code": "QHĐN",
+   "name": "Phòng Quan hệ Đối ngoại",
+   "type": "Phòng"
+  },
+  {
+   "code": "QTTB",
+   "name": "Phòng Quản trị Thiết bị",
+   "type": "Phòng"
+  },
+  {
+   "code": "TTTT",
+   "name": "Phòng Thông tin Truyền thông",
+   "type": "Phòng"
+  },
+  {
+   "code": "ĐTN",
+   "name": "Đoàn thanh niên",
+   "type": "Văn phòng"
+  },
+  {
+   "code": "CBB",
+   "name": "Trung tâm Khoa học Công nghệ Sinh học",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "CRC",
+   "name": "Trung tâm Nghiên cứu Bảo tồn Tài nguyên Thiên nhiên",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "RCHAA",
+   "name": "Trung tâm Nghiên cứu Ứng dụng Công nghệ cao trong Nông nghiệp",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "NNBDVH",
+   "name": "Trung tâm Ngoại ngữ và Bồi dưỡng Văn hóa",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "Usci",
+   "name": "Trung tâm Phát triển Thương hiệu và Kết nối Cộng đồng",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "BĐKH",
+   "name": "Trung tâm nghiên cứu Khí nhà kính và Biến đổi khí hậu",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "Selab",
+   "name": "PTN Công nghệ phần mềm (SELab)",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "SHPT",
+   "name": "PTN Công nghệ Sinh học phân tử",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "KTHN",
+   "name": "PTN Kỹ thuật Hạt nhân",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "PTTT",
+   "name": "PTN Phân tích Trung tâm",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "HLUD",
+   "name": "PTN Hóa lý Ứng dụng",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "PTNVLYS",
+   "name": "PTN Kỹ nghệ mô và Vật liệu Y sinh",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "VLKTC",
+   "name": "PTN Vật liệu Kỹ thuật cao",
+   "type": "Phòng thí nghiệm"
+  },
+  {
+   "code": "TBG",
+   "name": "Viện Tế bào gốc",
+   "type": "Viện"
+  },
+  {
+   "code": "ITEC",
+   "name": "Trung tâm ITEC",
+   "type": "Trung tâm"
+  },
+  {
+   "code": "KHAC",
+   "name": "Các đơn vị khác",
+   "type": "Khác"
+  }
+ ],
+ "kpis": [
+  {
+   "code": "I.1",
+   "name": "Đào tạo, thu hút đội ngũ giảng viên, chuyên gia có trình độ tiến sĩ, trong đó:",
+   "group": "I",
+   "groupName": "Nâng cao hiệu quả, hiệu lực quản trị đại học",
+   "target2030": "Tăng thêm 1.500 người",
+   "targetSchool": 60.0,
+   "lead": "TCHC",
+   "order": 1,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Lê Quan/Tổ chức - Hành chính"
+  },
+  {
+   "code": "I.2",
+   "name": "Tỷ lệ giảng viên đạt chức danh Giáo sư/Phó Giáo sư",
+   "group": "I",
+   "groupName": "Nâng cao hiệu quả, hiệu lực quản trị đại học",
+   "target2030": "Đạt 50% trên tổng số giảng viên có trình độ tiến sĩ",
+   "targetSchool": "5 \n((25%*322 TS) -76)",
+   "lead": "TCHC",
+   "order": 2,
+   "method": "Tỷ lệ lũy kế từng năm",
+   "leadPerson": "Trần Lê Quan/Tổ chức - Hành chính"
+  },
+  {
+   "code": "II.1",
+   "name": "Tỷ lệ quy mô tuyển sinh sau đại học/tuyển sinh đại học chính quy",
+   "group": "II",
+   "groupName": "Đào tạo",
+   "target2030": "0.3",
+   "targetSchool": 0.2,
+   "lead": "ĐT",
+   "order": 3,
+   "method": "Tỷ lệ lũy kế từng năm",
+   "leadPerson": "Nguyễn Trung Nhân/Đào tạo/ĐT SĐH"
+  },
+  {
+   "code": "II.2",
+   "name": "Chương trình đào tạo giảng dạy bằng tiếng Anh các ngành STEM (BẬC ĐẠI HỌC)",
+   "group": "II",
+   "groupName": "Đào tạo",
+   "target2030": "0.6",
+   "targetSchool": 38.0,
+   "lead": "ĐT",
+   "order": 4,
+   "method": "Cộng lũy kế",
+   "leadPerson": "Nguyễn Trung Nhân/Đào tạo/ĐT SĐH"
+  },
+  {
+   "code": "II.3",
+   "name": "Tỷ lệ sinh viên tốt nghiệp đúng hạn, trong đó:",
+   "group": "II",
+   "groupName": "Đào tạo",
+   "target2030": "0.7",
+   "targetSchool": 0.507,
+   "lead": "ĐT",
+   "order": 5,
+   "method": "Tỷ lệ lũy kế từng năm",
+   "leadPerson": "Văn Chí Nam/ Công tác sinh viên"
+  },
+  {
+   "code": "II.4",
+   "name": "Số lượng giải thưởng/huy chương trong các kỳ thi Olympic, khoa học, kỹ thuật quốc tế",
+   "group": "II",
+   "groupName": "Đào tạo",
+   "target2030": "10.0",
+   "targetSchool": null,
+   "lead": "ĐT",
+   "order": 6,
+   "method": "Cộng dồn",
+   "leadPerson": null
+  },
+  {
+   "code": "III.1",
+   "name": "Số lượng bài báo quốc tế, trong đó:",
+   "group": "III",
+   "groupName": "Khoa học và Công nghệ",
+   "target2030": "Tăng 30%/năm (giai đoạn 2026-2030 đạt 41.200 bài báo)",
+   "targetSchool": 1082.0,
+   "lead": "KHCN",
+   "order": 7,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/ Khoa học công nghệ"
+  },
+  {
+   "code": "III.2",
+   "name": "Sáng chế quốc tế",
+   "group": "III",
+   "groupName": "Khoa học và Công nghệ",
+   "target2030": "100.0",
+   "targetSchool": 6.0,
+   "lead": "KHCN",
+   "order": 8,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/ Khoa học công nghệ"
+  },
+  {
+   "code": "III.3",
+   "name": "Hội thảo khoa học quốc tế (Quy mô trên 100 đối tác quốc tế)",
+   "group": "III",
+   "groupName": "Khoa học và Công nghệ",
+   "target2030": "75 hội nghị/hội thảo",
+   "targetSchool": 2.0,
+   "lead": "KHCN",
+   "order": 9,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/ Khoa học công nghệ"
+  },
+  {
+   "code": "IV.1",
+   "name": "Giảng viên/Nghiên cứu viên quốc tế (>3 tháng hoặc tương đương)",
+   "group": "IV",
+   "groupName": "Tăng cường hợp tác và chủ động hội nhập",
+   "target2030": "Tăng thêm 1.500 lượt người",
+   "targetSchool": 21.0,
+   "lead": "QHĐN",
+   "order": 10,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "IV.2",
+   "name": "Quốc tế hóa hoạt động đào tạo",
+   "group": "IV",
+   "groupName": "Tăng cường hợp tác và chủ động hội nhập",
+   "target2030": "15.000 sinh viên",
+   "targetSchool": 418.0,
+   "lead": "QHĐN",
+   "order": 11,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "IV.3",
+   "name": "Tỷ lệ tăng số lượng dự án quốc tế mới trung bình hằng năm",
+   "group": "IV",
+   "groupName": "Tăng cường hợp tác và chủ động hội nhập",
+   "target2030": "0.15",
+   "targetSchool": 0.15,
+   "lead": "QHĐN",
+   "order": 12,
+   "method": null,
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "IV.4",
+   "name": "Hội thảo gắn kết doanh nghiệp (Quy mô trên 100 doanh nghiệp)",
+   "group": "IV",
+   "groupName": "Tăng cường hợp tác và chủ động hội nhập",
+   "target2030": "50 hội nghị/hội thảo",
+   "targetSchool": 2.0,
+   "lead": "QHĐN",
+   "order": 13,
+   "method": "Cộng dồn",
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "V.1",
+   "name": "Tỷ lệ tổng nguồn thu tăng so với năm trước",
+   "group": "V",
+   "groupName": "Phát triển nguồn lực tài chính bền vững",
+   "target2030": "7%-10%",
+   "targetSchool": "7%-10%",
+   "lead": "KHTC",
+   "order": 14,
+   "method": null,
+   "leadPerson": "Trần Lê Quan/ Kế hoạch - Tài chính"
+  },
+  {
+   "code": "V.2",
+   "name": "Tỷ lệ tăng thu nhập bình quân người lao động/năm",
+   "group": "V",
+   "groupName": "Phát triển nguồn lực tài chính bền vững",
+   "target2030": "10%-12%",
+   "targetSchool": "10%-12%",
+   "lead": "KHTC",
+   "order": 15,
+   "method": null,
+   "leadPerson": "Trần Lê Quan/ Kế hoạch - Tài chính"
+  },
+  {
+   "code": "V.3",
+   "name": "Tỷ lệ tổng nguồn thu tại đơn vị tăng bình quân/năm",
+   "group": "V",
+   "groupName": "Phát triển nguồn lực tài chính bền vững",
+   "target2030": "0.15",
+   "targetSchool": 0.15,
+   "lead": "KHTC",
+   "order": 16,
+   "method": null,
+   "leadPerson": "Trần Lê Quan/ Kế hoạch - Tài chính"
+  },
+  {
+   "code": "B.1",
+   "name": "Tăng số lượng nhà khoa học mới uy tín, là người nước ngoài, có quan hệ hợp tác mật thiết với ĐHQG-HCM được kết nối",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "190",
+   "targetSchool": "Đơn vị chủ trì báo cáo",
+   "lead": "QHĐN",
+   "order": 17,
+   "method": "x",
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "B.2",
+   "name": "Giảng viên/nghiên cứu viên có trình độ tiến sĩ tham dự hội nghị hội thảo ít nhất 01 lần/năm",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "100% (trong đó, tối thiểu 50% số lượt tham dự là hội nghị, hội thảo quốc tế)",
+   "targetSchool": "Đơn vị chủ trì báo cáo",
+   "lead": "QHĐN",
+   "order": 18,
+   "method": "x",
+   "leadPerson": "Trần Minh Triết/QHĐN/KHCN/TCHC"
+  },
+  {
+   "code": "B.3",
+   "name": "Giảng viên làm việc 01 năm tại phòng thí nghiệm, trung tâm nghiên cứu và phát triển của các tập đoàn, doanh nghiệp, viện nghiên cứu và đại học trên thế giới sau mỗi 05 đến 07 năm công tác",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "1.0",
+   "targetSchool": 1.0,
+   "lead": "TCHC",
+   "order": 19,
+   "method": "x",
+   "leadPerson": "Trần Lê Quan/Tổ chức - Hành chính"
+  },
+  {
+   "code": "B.4",
+   "name": "Nghiên cứu sinh tiến sĩ phải dành tối thiểu 10 tháng trao đổi nghiên cứu tại các viện nghiên cứu, đại học hàng đầu thế giới",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "Tối thiểu 30% là chuyên gia, nhà khoa học uy tín quốc tế tại các đại học, trung tâm/viện nghiên cứu, của các tập đoàn nước ngoài",
+   "targetSchool": 1.0,
+   "lead": "SĐH",
+   "order": 20,
+   "method": "x",
+   "leadPerson": "Nguyễn Trung Nhân/ĐT SĐH"
+  },
+  {
+   "code": "B.5",
+   "name": "Sinh viên đại học có đợt thực tập, thực hành tại doanh nghiệp, tổ chức trong và ngoài nước tối thiểu 01 kỳ học",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "1.0",
+   "targetSchool": 1.0,
+   "lead": "ĐT",
+   "order": 21,
+   "method": "x",
+   "leadPerson": null
+  },
+  {
+   "code": "B.6",
+   "name": "Số lượng đối tác là nhà lãnh đạo, quản lý doanh nghiệp mới được kết nối",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "1.000 nhân sự",
+   "targetSchool": 25.0,
+   "lead": "QHĐN",
+   "order": 22,
+   "method": "x",
+   "leadPerson": "Trần Minh Triết/Quan hệ đối ngoại"
+  },
+  {
+   "code": "B.7",
+   "name": "Đổi mới chương trình đào tạo theo định hướng học tập trải nghiệm và công nghệ số; gắn kết doanh nghiệp – cộng đồng để nâng cao chất lượng và cá thể hoá đào tạo cho người học tài năng.",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "1.0",
+   "targetSchool": "Đơn vị chủ trì báo cáo",
+   "lead": "ĐT",
+   "order": 23,
+   "method": null,
+   "leadPerson": "Nguyễn Trung Nhân/ĐT SĐH/Đào tạo"
+  },
+  {
+   "code": "B.8",
+   "name": "Triển khai SDGs tại ĐHQG-HCM",
+   "group": "B",
+   "groupName": "Các mục tiêu, nhiệm vụ khác",
+   "target2030": "100% hoạt động liên quan đến phát triển bền vững được gắn nhãn SDGs (toàn hệ thống)",
+   "targetSchool": 1.0,
+   "lead": "TTTT",
+   "order": 24,
+   "method": "x",
+   "leadPerson": "Trần Lê Quan/ Thông tin - Truyền thông"
+  }
+ ],
+ "allocations": [
+  {
+   "kpi": "I.1",
+   "unit": "CNTT",
+   "target": 11.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐC",
+   "target": 3.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐTVT",
+   "target": 4.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "HH",
+   "target": 7.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHLN",
+   "target": 4.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNVL",
+   "target": 7.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "MT",
+   "target": 3.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNSH",
+   "target": 8.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "TTH",
+   "target": 7.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "VLKT",
+   "target": 7.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHAC",
+   "target": 0.0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "SĐH",
+   "target": 3.0
+  },
+  {
+   "kpi": "III.1",
+   "unit": "KHCN",
+   "target": 1082.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "KHCN",
+   "target": 6.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "CNTT",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "Selab",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "HH",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "CNSH",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "ĐTVT",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "TBG",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "SHPT",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "HLUD",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "TBG",
+   "target": 1.0
+  },
+  {
+   "kpi": "III.3",
+   "unit": "KHCN",
+   "target": 2.0
+  },
+  {
+   "kpi": "V.3",
+   "unit": "KHTC",
+   "target": 0.15
+  },
+  {
+   "kpi": "B.1",
+   "unit": "CNTT",
+   "target": 38.0
+  },
+  {
+   "kpi": "B.5",
+   "unit": "ĐT",
+   "target": 1.0
+  },
+  {
+   "kpi": "B.6",
+   "unit": "QHĐN",
+   "target": 25.0
+  }
+ ],
+ "entries": [
+  {
+   "kpi": "I.1",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 2.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 7,
+   "value": 1.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐC",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐC",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐTVT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "ĐTVT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "HH",
+   "year": 2026,
+   "month": 6,
+   "value": 2.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "HH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHLN",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHLN",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNVL",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNVL",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "MT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "MT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 4.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 6,
+   "value": 2.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 7,
+   "value": 1.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHAC",
+   "year": 2026,
+   "month": 6,
+   "value": 2.0
+  },
+  {
+   "kpi": "I.1",
+   "unit": "KHAC",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "I.2",
+   "unit": "TCHC",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "I.2",
+   "unit": "TCHC",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "II.1",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 6,
+   "value": 443.0
+  },
+  {
+   "kpi": "II.1",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 7,
+   "value": 4.0
+  },
+  {
+   "kpi": "II.1",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 8,
+   "value": 0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "ĐT",
+   "year": 2026,
+   "month": 6,
+   "value": 17.0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "ĐT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 6,
+   "value": 18.0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "II.2",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 8,
+   "value": 0
+  },
+  {
+   "kpi": "II.3",
+   "unit": "CTSV",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "II.4",
+   "unit": "ĐT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "III.1",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 6,
+   "value": 557.0
+  },
+  {
+   "kpi": "III.1",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 7,
+   "value": 116.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 6,
+   "value": 2.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "HLUD",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "HLUD",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "TBG",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "III.2",
+   "unit": "TBG",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "III.3",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "III.3",
+   "unit": "KHCN",
+   "year": 2026,
+   "month": 7,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 6,
+   "value": 4.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 7,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "CNVL",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "CNVL",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "MT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "MT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 8,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "CRC",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "RCHAA",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "NNBDVH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "NNBDVH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "Usci",
+   "year": 2026,
+   "month": 7,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "Selab",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.1",
+   "unit": "Selab",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "ĐTVT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 6,
+   "value": 9.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 7,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 8,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "HH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNVL",
+   "year": 2026,
+   "month": 6,
+   "value": 5.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 7,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "MT",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "ĐC",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "ĐC",
+   "year": 2026,
+   "month": 7,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "ĐTVT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "PTNVLYS",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "PTNVLYS",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 6,
+   "value": 20.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 7,
+   "value": 8.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 7,
+   "value": 4.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 8,
+   "value": 4.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 9,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "HH",
+   "year": 2026,
+   "month": 6,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "HH",
+   "year": 2026,
+   "month": 7,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "HH",
+   "year": 2026,
+   "month": 8,
+   "value": 12.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 8,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 10,
+   "value": 4.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 11,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "TTH",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "MT",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "MT",
+   "year": 2026,
+   "month": 7,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "MT",
+   "year": 2026,
+   "month": 8,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 6.0
+  },
+  {
+   "kpi": "IV.2",
+   "unit": "KHLN",
+   "year": 2026,
+   "month": 6,
+   "value": 5.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 6,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "QHĐN",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "HH",
+   "year": 2026,
+   "month": 9,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "KHLN",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "CNSH",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "VLKT",
+   "year": 2026,
+   "month": 9,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.3",
+   "unit": "CRC",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "CNTT",
+   "year": 2026,
+   "month": 10,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "SHPT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "PTTT",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "VLKTC",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "VLKTC",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "Usci",
+   "year": 2026,
+   "month": 7,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "Usci",
+   "year": 2026,
+   "month": 8,
+   "value": 3.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "Usci",
+   "year": 2026,
+   "month": 9,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "Usci",
+   "year": 2026,
+   "month": 10,
+   "value": 2.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "CTSV",
+   "year": 2026,
+   "month": 6,
+   "value": 1.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "CTSV",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "ĐTN",
+   "year": 2026,
+   "month": 6,
+   "value": 18.0
+  },
+  {
+   "kpi": "IV.4",
+   "unit": "ĐTN",
+   "year": 2026,
+   "month": 7,
+   "value": 3.0
+  },
+  {
+   "kpi": "B.4",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 6,
+   "value": 0
+  },
+  {
+   "kpi": "B.4",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "B.4",
+   "unit": "SĐH",
+   "year": 2026,
+   "month": 8,
+   "value": 0
+  },
+  {
+   "kpi": "B.7",
+   "unit": "ĐT",
+   "year": 2026,
+   "month": 7,
+   "value": 0
+  },
+  {
+   "kpi": "B.7",
+   "unit": "ĐT",
+   "year": 2026,
+   "month": 8,
+   "value": 0
+  },
+  {
+   "kpi": "B.8",
+   "unit": "TTTT",
+   "year": 2026,
+   "month": 6,
+   "value": 76.0
+  },
+  {
+   "kpi": "B.8",
+   "unit": "TTTT",
+   "year": 2026,
+   "month": 7,
+   "value": 19.0
+  },
+  {
+   "kpi": "B.8",
+   "unit": "TTTT",
+   "year": 2026,
+   "month": 8,
+   "value": 16.0
+  }
+ ],
+ "groups": [
+  {
+   "code": "I",
+   "name": "Nâng cao hiệu quả, hiệu lực quản trị đại học"
+  },
+  {
+   "code": "II",
+   "name": "Đào tạo"
+  },
+  {
+   "code": "III",
+   "name": "Khoa học và Công nghệ"
+  },
+  {
+   "code": "IV",
+   "name": "Tăng cường hợp tác và chủ động hội nhập"
+  },
+  {
+   "code": "V",
+   "name": "Phát triển nguồn lực tài chính bền vững"
+  },
+  {
+   "code": "B",
+   "name": "Các mục tiêu, nhiệm vụ khác"
+  }
+ ]
+}
