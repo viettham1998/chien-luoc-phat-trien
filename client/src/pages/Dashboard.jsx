@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { api } from '../api.js';
+import { useTheme } from '../theme.jsx';
 import {
   MONTH_LABELS, GROUP_COLORS, GROUP_SHORT, kpiProgress, groupTotals,
   actualByKpi, targetByKpi, unitTotals, fmt
@@ -27,12 +28,13 @@ function StatTile({ label, value, sub, accent, icon }) {
         <div className="text-lg">{icon}</div>
       </div>
       <div className="mt-2 text-3xl font-black tracking-tight" style={{ color: accent }}>{value}</div>
-      {sub && <div className="mt-1 text-xs text-white/45">{sub}</div>}
+      {sub && <div className="mt-1 text-xs text-[rgb(var(--fg-rgb)_/_0.45)]">{sub}</div>}
     </div>
   );
 }
 
 export default function Dashboard() {
+  const { theme } = useTheme();
   const [data, setData] = useState(null);
   const [years, setYears] = useState([2026]);
   const [year, setYear] = useState(2026);
@@ -90,16 +92,16 @@ export default function Dashboard() {
   return (
     <div className="space-y-6">
       {/* HERO */}
-      <section className="animate-floatIn overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-brand-950/60 via-[#0a1130]/40 to-transparent p-7">
+      <section className="hero-surface animate-floatIn overflow-hidden rounded-3xl p-7">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <div className="chip bg-brand-500/15 text-brand-200">Biểu mẫu số 02 · Báo cáo VNU</div>
-            <h1 className="mt-3 text-3xl font-black leading-tight text-white md:text-4xl">
+            <h1 className="mt-3 text-3xl font-black leading-tight text-[rgb(var(--fg-rgb))] md:text-4xl">
               Kết quả thực hiện KPIs Chiến lược phát triển
             </h1>
-            <p className="mt-2 max-w-2xl text-sm text-white/55">
+            <p className="mt-2 max-w-2xl text-sm text-[rgb(var(--fg-rgb)_/_0.55)]">
               Giai đoạn 2021–2030, tầm nhìn 2045 · Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM.
-              Số liệu được cập nhật <span className="text-white/80">bổ sung theo từng tháng</span> — bức tranh KPI ngày càng rõ nét.
+              Số liệu được cập nhật <span className="text-[rgb(var(--fg-rgb)_/_0.8)]">bổ sung theo từng tháng</span> — bức tranh KPI ngày càng rõ nét.
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -123,13 +125,13 @@ export default function Dashboard() {
       <section className="flex flex-wrap items-center gap-2">
         <button
           onClick={() => setGroupFilter(null)}
-          className={`chip border ${!groupFilter ? 'border-white/30 bg-white/10 text-white' : 'border-white/10 text-white/50 hover:text-white'}`}
+          className={`chip border ${!groupFilter ? 'border-[rgb(var(--fg-rgb)_/_0.3)] bg-[rgb(var(--fg-rgb)_/_0.1)] text-[rgb(var(--fg-rgb))]' : 'border-[rgb(var(--fg-rgb)_/_0.1)] text-[rgb(var(--fg-rgb)_/_0.5)] hover:text-[rgb(var(--fg-rgb))]'}`}
         >Tất cả nhóm</button>
         {Object.keys(GROUP_COLORS).filter(g => data.kpis.some(k => k.group_code === g)).map(g => (
           <button
             key={g}
             onClick={() => setGroupFilter(groupFilter === g ? null : g)}
-            className={`chip border transition ${groupFilter === g ? 'text-white' : 'text-white/60 hover:text-white'}`}
+            className={`chip border transition ${groupFilter === g ? 'text-[rgb(var(--fg-rgb))]' : 'text-[rgb(var(--fg-rgb)_/_0.6)] hover:text-[rgb(var(--fg-rgb))]'}`}
             style={{
               borderColor: groupFilter === g ? GROUP_COLORS[g] : 'rgba(255,255,255,0.1)',
               background: groupFilter === g ? GROUP_COLORS[g] + '22' : 'transparent'
@@ -151,7 +153,7 @@ export default function Dashboard() {
                 key={l.id}
                 onClick={() => setLayout(l.id)}
                 className={`group flex items-center gap-2 rounded-xl border px-3 py-2 text-sm font-medium transition ${
-                  layout === l.id ? 'border-brand-400/60 bg-brand-500/15 text-white shadow-glow' : 'border-white/10 text-white/55 hover:border-white/25 hover:text-white'
+                  layout === l.id ? 'border-brand-400/60 bg-brand-500/15 text-[rgb(var(--fg-rgb))] shadow-glow' : 'border-[rgb(var(--fg-rgb)_/_0.1)] text-[rgb(var(--fg-rgb)_/_0.55)] hover:border-[rgb(var(--fg-rgb)_/_0.25)] hover:text-[rgb(var(--fg-rgb))]'
                 }`}
                 title={l.desc}
               >
@@ -161,15 +163,15 @@ export default function Dashboard() {
           </div>
 
           <div className="mb-4">
-            <div className="text-lg font-bold text-white">{LAYOUTS.find(l => l.id === layout)?.label}</div>
-            <div className="text-xs text-white/45">{LAYOUTS.find(l => l.id === layout)?.desc}
+            <div className="text-lg font-bold text-[rgb(var(--fg-rgb))]">{LAYOUTS.find(l => l.id === layout)?.label}</div>
+            <div className="text-xs text-[rgb(var(--fg-rgb)_/_0.45)]">{LAYOUTS.find(l => l.id === layout)?.desc}
               {groupFilter && <span className="ml-1 text-brand-300">· Lọc: {GROUP_SHORT[groupFilter]}</span>}</div>
           </div>
 
-          <ChartArea layout={layout} data={filtered} upto={upto} />
+          <div key={theme}><ChartArea layout={layout} data={filtered} upto={upto} /></div>
 
           {/* Month time slider */}
-          <div className="mt-6 rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+          <div className="mt-6 rounded-2xl border border-[rgb(var(--fg-rgb)_/_0.1)] bg-[rgb(var(--fg-rgb)_/_0.02)] p-4">
             <div className="mb-2 flex items-center justify-between">
               <div className="label">Xem số liệu lũy kế đến hết tháng</div>
               <div className="text-sm font-bold text-brand-300">{MONTH_LABELS[upto]} / {year}</div>
@@ -179,11 +181,11 @@ export default function Dashboard() {
               onChange={e => setUpto(Number(e.target.value))}
               className="w-full accent-brand-500"
             />
-            <div className="mt-1 flex justify-between text-[10px] text-white/30">
+            <div className="mt-1 flex justify-between text-[10px] text-[rgb(var(--fg-rgb)_/_0.3)]">
               {[1, 3, 6, 9, 12].map(m => <span key={m}>{MONTH_LABELS[m]}</span>)}
             </div>
-            <div className="mt-2 text-xs text-white/40">
-              Kéo thanh trượt để thấy dữ liệu dày lên theo thời gian. Đã ghi nhận đến <span className="text-white/70">{MONTH_LABELS[maxMonth]}</span>.
+            <div className="mt-2 text-xs text-[rgb(var(--fg-rgb)_/_0.4)]">
+              Kéo thanh trượt để thấy dữ liệu dày lên theo thời gian. Đã ghi nhận đến <span className="text-[rgb(var(--fg-rgb)_/_0.7)]">{MONTH_LABELS[maxMonth]}</span>.
             </div>
           </div>
         </div>
@@ -216,15 +218,15 @@ function GroupSidebar({ data, upto, onPick, active }) {
   const max = Math.max(1, ...totals.map(t => t.value));
   return (
     <div className="card p-6">
-      <div className="mb-4 text-sm font-bold text-white">Đóng góp theo nhóm chiến lược</div>
+      <div className="mb-4 text-sm font-bold text-[rgb(var(--fg-rgb))]">Đóng góp theo nhóm chiến lược</div>
       <div className="space-y-3">
         {totals.map(t => (
           <button key={t.group} onClick={() => onPick(active === t.group ? null : t.group)} className="w-full text-left">
             <div className="mb-1 flex items-center justify-between text-xs">
-              <span className="font-medium text-white/70">{t.group}. {t.name}</span>
-              <span className="font-bold text-white">{fmt(t.value)}</span>
+              <span className="font-medium text-[rgb(var(--fg-rgb)_/_0.7)]">{t.group}. {t.name}</span>
+              <span className="font-bold text-[rgb(var(--fg-rgb))]">{fmt(t.value)}</span>
             </div>
-            <div className="h-2 overflow-hidden rounded-full bg-white/5">
+            <div className="h-2 overflow-hidden rounded-full bg-[rgb(var(--fg-rgb)_/_0.05)]">
               <div className="h-full rounded-full transition-all" style={{ width: `${(t.value / max) * 100}%`, background: t.color }} />
             </div>
           </button>
@@ -238,13 +240,13 @@ function KpiTable({ data, upto }) {
   const rows = kpiProgress(data, upto);
   return (
     <section className="card overflow-hidden">
-      <div className="border-b border-white/10 px-6 py-4 text-sm font-bold text-white">
+      <div className="border-b border-[rgb(var(--fg-rgb)_/_0.1)] px-6 py-4 text-sm font-bold text-[rgb(var(--fg-rgb))]">
         Chi tiết các chỉ tiêu (đến {MONTH_LABELS[upto]})
       </div>
       <div className="overflow-x-auto">
         <table className="w-full min-w-[720px] text-sm">
           <thead>
-            <tr className="text-left text-xs uppercase tracking-wider text-white/40">
+            <tr className="text-left text-xs uppercase tracking-wider text-[rgb(var(--fg-rgb)_/_0.4)]">
               <th className="px-6 py-3 font-medium">Mã</th>
               <th className="px-4 py-3 font-medium">Chỉ tiêu</th>
               <th className="px-4 py-3 font-medium">Chủ trì</th>
@@ -255,23 +257,23 @@ function KpiTable({ data, upto }) {
           </thead>
           <tbody>
             {rows.map(r => (
-              <tr key={r.code} className="border-t border-white/5 hover:bg-white/[0.02]">
+              <tr key={r.code} className="border-t border-[rgb(var(--fg-rgb)_/_0.05)] hover:bg-[rgb(var(--fg-rgb)_/_0.02)]">
                 <td className="px-6 py-3">
                   <span className="chip text-[11px] font-bold" style={{ background: (GROUP_COLORS[r.group] || '#666') + '22', color: GROUP_COLORS[r.group] }}>{r.code}</span>
                 </td>
-                <td className="max-w-[380px] px-4 py-3 text-white/80">{r.name}</td>
-                <td className="px-4 py-3 text-white/50">{r.lead || '—'}</td>
-                <td className="px-4 py-3 text-right font-bold text-white">{r.kind === 'ratio' ? '—' : fmt(r.actual)}</td>
-                <td className="px-4 py-3 text-right text-white/60">{r.target ? fmt(r.target) : (r.kind === 'ratio' ? 'tỷ lệ' : '—')}</td>
+                <td className="max-w-[380px] px-4 py-3 text-[rgb(var(--fg-rgb)_/_0.8)]">{r.name}</td>
+                <td className="px-4 py-3 text-[rgb(var(--fg-rgb)_/_0.5)]">{r.lead || '—'}</td>
+                <td className="px-4 py-3 text-right font-bold text-[rgb(var(--fg-rgb))]">{r.kind === 'ratio' ? '—' : fmt(r.actual)}</td>
+                <td className="px-4 py-3 text-right text-[rgb(var(--fg-rgb)_/_0.6)]">{r.target ? fmt(r.target) : (r.kind === 'ratio' ? 'tỷ lệ' : '—')}</td>
                 <td className="px-4 py-3">
                   {r.pct != null ? (
                     <div className="flex items-center gap-2">
-                      <div className="h-1.5 w-24 overflow-hidden rounded-full bg-white/10">
+                      <div className="h-1.5 w-24 overflow-hidden rounded-full bg-[rgb(var(--fg-rgb)_/_0.1)]">
                         <div className="h-full rounded-full" style={{ width: `${r.pct}%`, background: r.pct >= 100 ? '#22c55e' : r.pct >= 50 ? '#3b82f6' : '#f59e0b' }} />
                       </div>
-                      <span className="text-xs text-white/60">{r.pct}%</span>
+                      <span className="text-xs text-[rgb(var(--fg-rgb)_/_0.6)]">{r.pct}%</span>
                     </div>
-                  ) : <span className="text-xs text-white/30">—</span>}
+                  ) : <span className="text-xs text-[rgb(var(--fg-rgb)_/_0.3)]">—</span>}
                 </td>
               </tr>
             ))}
@@ -285,10 +287,10 @@ function KpiTable({ data, upto }) {
 function Skeleton() {
   return (
     <div className="space-y-6">
-      <div className="h-52 animate-pulse rounded-3xl bg-white/5" />
+      <div className="h-52 animate-pulse rounded-3xl bg-[rgb(var(--fg-rgb)_/_0.05)]" />
       <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
-        <div className="h-[560px] animate-pulse rounded-2xl bg-white/5" />
-        <div className="h-[560px] animate-pulse rounded-2xl bg-white/5" />
+        <div className="h-[560px] animate-pulse rounded-2xl bg-[rgb(var(--fg-rgb)_/_0.05)]" />
+        <div className="h-[560px] animate-pulse rounded-2xl bg-[rgb(var(--fg-rgb)_/_0.05)]" />
       </div>
     </div>
   );

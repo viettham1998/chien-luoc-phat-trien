@@ -52,9 +52,9 @@ export default function Editor() {
     <div className="space-y-5">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-black text-white">Nhập số liệu báo cáo tháng</h1>
-          <p className="mt-1 text-sm text-white/50">
-            Ghi số liệu <span className="text-white/80">phát sinh của từng tháng</span> (không nhập lũy kế). Mỗi lần lưu được ghi thêm vào lịch sử — không ghi đè dữ liệu cũ.
+          <h1 className="text-2xl font-black text-[rgb(var(--fg-rgb))]">Nhập số liệu báo cáo tháng</h1>
+          <p className="mt-1 text-sm text-[rgb(var(--fg-rgb)_/_0.5)]">
+            Ghi số liệu <span className="text-[rgb(var(--fg-rgb)_/_0.8)]">phát sinh của từng tháng</span> (không nhập lũy kế). Mỗi lần lưu được ghi thêm vào lịch sử — không ghi đè dữ liệu cũ.
           </p>
         </div>
         {isAdmin && (
@@ -71,30 +71,30 @@ export default function Editor() {
       {!isAdmin && (
         <div className="card p-4 text-sm">
           <span className="label">Đơn vị của bạn</span>
-          <div className="mt-1 text-lg font-bold text-white">{user.unit?.name} <span className="text-white/40">({user.unit?.code})</span></div>
+          <div className="mt-1 text-lg font-bold text-[rgb(var(--fg-rgb))]">{user.unit?.name} <span className="text-[rgb(var(--fg-rgb)_/_0.4)]">({user.unit?.code})</span></div>
         </div>
       )}
 
       {isAdmin && !unitId && (
-        <div className="card p-10 text-center text-white/40">Chọn một đơn vị để nhập / chỉnh sửa số liệu.</div>
+        <div className="card p-10 text-center text-[rgb(var(--fg-rgb)_/_0.4)]">Chọn một đơn vị để nhập / chỉnh sửa số liệu.</div>
       )}
 
-      {unitId && !kpis && <div className="card p-10 text-center text-white/40">Đang tải…</div>}
+      {unitId && !kpis && <div className="card p-10 text-center text-[rgb(var(--fg-rgb)_/_0.4)]">Đang tải…</div>}
 
       {kpis && kpis.length === 0 && (
-        <div className="card p-10 text-center text-white/40">Đơn vị này chưa được phân bổ KPI nào.</div>
+        <div className="card p-10 text-center text-[rgb(var(--fg-rgb)_/_0.4)]">Đơn vị này chưa được phân bổ KPI nào.</div>
       )}
 
       {kpis && kpis.length > 0 && (
         <div className="card overflow-hidden">
-          <div className="border-b border-white/10 px-5 py-3 text-sm font-semibold text-white/80">
+          <div className="border-b border-[rgb(var(--fg-rgb)_/_0.1)] px-5 py-3 text-sm font-semibold text-[rgb(var(--fg-rgb)_/_0.8)]">
             {unitName} — {kpis.length} chỉ tiêu · Năm {year}
           </div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[900px] text-sm">
-              <thead className="bg-white/[0.02]">
-                <tr className="text-xs uppercase tracking-wider text-white/40">
-                  <th className="sticky left-0 bg-[#0a0f1f] px-4 py-3 text-left font-medium">KPI</th>
+              <thead className="bg-[rgb(var(--fg-rgb)_/_0.02)]">
+                <tr className="text-xs uppercase tracking-wider text-[rgb(var(--fg-rgb)_/_0.4)]">
+                  <th className="sticky left-0 bg-[rgb(var(--elevated-rgb))] px-4 py-3 text-left font-medium">KPI</th>
                   <th className="px-3 py-3 text-right font-medium">Chỉ tiêu</th>
                   {REPORT_MONTHS.map(m => <th key={m} className="px-2 py-3 text-center font-medium">{MONTH_LABELS[m]}</th>)}
                   <th className="px-3 py-3 text-right font-medium">Lũy kế</th>
@@ -111,7 +111,7 @@ export default function Editor() {
       )}
 
       {toast && (
-        <div className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-xl px-4 py-2.5 text-sm font-medium shadow-xl ${toast.isErr ? 'bg-red-500 text-white' : 'bg-emerald-500 text-white'}`}>
+        <div className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-xl px-4 py-2.5 text-sm font-medium shadow-xl ${toast.isErr ? 'bg-red-500 text-[rgb(var(--fg-rgb))]' : 'bg-emerald-500 text-[rgb(var(--fg-rgb))]'}`}>
           {toast.msg}
         </div>
       )}
@@ -124,15 +124,15 @@ export default function Editor() {
 function KpiRow({ kpi, unitId, year, onSave, onHistory }) {
   const total = REPORT_MONTHS.reduce((s, m) => s + (kpi.months[m]?.value || 0), 0);
   return (
-    <tr className="border-t border-white/5 hover:bg-white/[0.02]">
-      <td className="sticky left-0 z-10 max-w-[360px] bg-[#0a0f1f] px-4 py-3">
+    <tr className="border-t border-[rgb(var(--fg-rgb)_/_0.05)] hover:bg-[rgb(var(--fg-rgb)_/_0.02)]">
+      <td className="sticky left-0 z-10 max-w-[360px] bg-[rgb(var(--elevated-rgb))] px-4 py-3">
         <div className="flex items-center gap-2">
           <span className="chip text-[10px] font-bold" style={{ background: (GROUP_COLORS[kpi.group_code] || '#666') + '22', color: GROUP_COLORS[kpi.group_code] }}>{kpi.code}</span>
-          <span className="text-white/85">{kpi.name}</span>
+          <span className="text-[rgb(var(--fg-rgb)_/_0.85)]">{kpi.name}</span>
         </div>
-        {kpi.method && <div className="mt-0.5 pl-1 text-[11px] text-white/35">Cách tính: {kpi.method}</div>}
+        {kpi.method && <div className="mt-0.5 pl-1 text-[11px] text-[rgb(var(--fg-rgb)_/_0.35)]">Cách tính: {kpi.method}</div>}
       </td>
-      <td className="px-3 py-3 text-right text-white/50">{kpi.my_target != null ? fmt(kpi.my_target) : '—'}</td>
+      <td className="px-3 py-3 text-right text-[rgb(var(--fg-rgb)_/_0.5)]">{kpi.my_target != null ? fmt(kpi.my_target) : '—'}</td>
       {REPORT_MONTHS.map(m => (
         <td key={m} className="px-1.5 py-2">
           <MonthCell
@@ -160,14 +160,14 @@ function MonthCell({ value, onCommit, onHistory }) {
         onBlur={() => { if (dirty && v !== '') onCommit(v); }}
         inputMode="decimal"
         className={`w-16 rounded-lg border px-2 py-1.5 text-center text-sm outline-none transition ${
-          dirty ? 'border-amber-400/60 bg-amber-400/10 text-white' :
-          value != null ? 'border-white/10 bg-white/[0.04] text-white' : 'border-white/5 bg-transparent text-white/30'
+          dirty ? 'border-amber-400/60 bg-amber-400/10 text-[rgb(var(--fg-rgb))]' :
+          value != null ? 'border-[rgb(var(--fg-rgb)_/_0.1)] bg-[rgb(var(--fg-rgb)_/_0.04)] text-[rgb(var(--fg-rgb))]' : 'border-[rgb(var(--fg-rgb)_/_0.05)] bg-transparent text-[rgb(var(--fg-rgb)_/_0.3)]'
         } focus:border-brand-400/60`}
         placeholder="–"
       />
       {value != null && (
         <button onClick={onHistory} title="Lịch sử chỉnh sửa"
-          className="absolute -right-1 -top-1 hidden h-4 w-4 place-items-center rounded-full bg-brand-500 text-[9px] text-white group-hover:grid">↻</button>
+          className="absolute -right-1 -top-1 hidden h-4 w-4 place-items-center rounded-full bg-brand-500 text-[9px] text-[rgb(var(--fg-rgb))] group-hover:grid">↻</button>
       )}
     </div>
   );
@@ -181,23 +181,23 @@ function HistoryModal({ kpi, unitId, year, month, onClose }) {
   return (
     <div className="fixed inset-0 z-50 grid place-items-center bg-black/60 p-4" onClick={onClose}>
       <div className="card w-full max-w-lg p-6" onClick={e => e.stopPropagation()}>
-        <div className="mb-1 text-sm font-bold text-white">Lịch sử ghi số liệu · {kpi.code} · {MONTH_LABELS[month]}/{year}</div>
-        <div className="mb-4 text-xs text-white/45">Mỗi lần chỉnh sửa được lưu thành bản ghi mới (append-only), không xóa dữ liệu cũ.</div>
+        <div className="mb-1 text-sm font-bold text-[rgb(var(--fg-rgb))]">Lịch sử ghi số liệu · {kpi.code} · {MONTH_LABELS[month]}/{year}</div>
+        <div className="mb-4 text-xs text-[rgb(var(--fg-rgb)_/_0.45)]">Mỗi lần chỉnh sửa được lưu thành bản ghi mới (append-only), không xóa dữ liệu cũ.</div>
         <div className="space-y-2">
-          {!rows && <div className="text-white/40">Đang tải…</div>}
+          {!rows && <div className="text-[rgb(var(--fg-rgb)_/_0.4)]">Đang tải…</div>}
           {rows?.map((r, i) => (
-            <div key={r.id} className={`flex items-center justify-between rounded-lg border px-3 py-2 text-sm ${r.is_current ? 'border-emerald-400/40 bg-emerald-400/5' : 'border-white/10 bg-white/[0.02] opacity-60'}`}>
+            <div key={r.id} className={`flex items-center justify-between rounded-lg border px-3 py-2 text-sm ${r.is_current ? 'border-emerald-400/40 bg-emerald-400/5' : 'border-[rgb(var(--fg-rgb)_/_0.1)] bg-[rgb(var(--fg-rgb)_/_0.02)] opacity-60'}`}>
               <div>
-                <span className="font-bold text-white">{fmt(r.value)}</span>
-                {r.note && <span className="ml-2 text-xs text-white/50">“{r.note}”</span>}
+                <span className="font-bold text-[rgb(var(--fg-rgb))]">{fmt(r.value)}</span>
+                {r.note && <span className="ml-2 text-xs text-[rgb(var(--fg-rgb)_/_0.5)]">“{r.note}”</span>}
               </div>
-              <div className="text-right text-[11px] text-white/40">
+              <div className="text-right text-[11px] text-[rgb(var(--fg-rgb)_/_0.4)]">
                 {r.is_current ? <span className="text-emerald-300">Hiện hành</span> : 'Đã thay thế'} · {r.created_at}
                 {r.by_name && <div>{r.by_name}</div>}
               </div>
             </div>
           ))}
-          {rows?.length === 0 && <div className="text-white/40">Chưa có dữ liệu.</div>}
+          {rows?.length === 0 && <div className="text-[rgb(var(--fg-rgb)_/_0.4)]">Chưa có dữ liệu.</div>}
         </div>
         <button onClick={onClose} className="btn-ghost mt-5 w-full">Đóng</button>
       </div>

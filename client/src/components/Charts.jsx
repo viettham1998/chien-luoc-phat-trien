@@ -9,19 +9,28 @@ import {
   cumulativeSeries, groupStackedSeries, groupTotals, unitTotals, kpiProgress, fmt
 } from '../lib/compute.js';
 
-const axis = { stroke: 'rgba(255,255,255,0.25)', fontSize: 11 };
-const grid = 'rgba(255,255,255,0.06)';
+function themeColors() {
+  const light = typeof document !== 'undefined' && document.documentElement.getAttribute('data-theme') === 'light';
+  return {
+    light,
+    axis: { stroke: light ? 'rgba(30,41,59,0.6)' : 'rgba(255,255,255,0.25)', fontSize: 11 },
+    grid: light ? 'rgba(15,23,42,0.10)' : 'rgba(255,255,255,0.06)',
+    tick: light ? 'rgba(30,41,59,0.72)' : 'rgba(255,255,255,0.6)',
+    tickDim: light ? 'rgba(30,41,59,0.45)' : 'rgba(255,255,255,0.3)',
+    legend: light ? '#334155' : '#cbd5e1'
+  };
+}
 
 function TT({ active, payload, label, unit = '' }) {
   if (!active || !payload?.length) return null;
   return (
-    <div className="rounded-xl border border-white/15 bg-[#0a0f1f]/95 px-3 py-2 text-xs shadow-xl">
-      {label != null && <div className="mb-1 font-semibold text-white">{label}</div>}
+    <div className="rounded-xl border border-[rgb(var(--fg-rgb)_/_0.15)] bg-[rgb(var(--elevated-rgb)_/_0.96)] px-3 py-2 text-xs shadow-xl">
+      {label != null && <div className="mb-1 font-semibold text-[rgb(var(--fg-rgb))]">{label}</div>}
       {payload.map((p, i) => (
-        <div key={i} className="flex items-center gap-2 text-white/80">
+        <div key={i} className="flex items-center gap-2 text-[rgb(var(--fg-rgb)_/_0.8)]">
           <span className="h-2 w-2 rounded-full" style={{ background: p.color || p.fill }} />
           <span>{p.name}:</span>
-          <span className="font-semibold text-white">{fmt(p.value)}{unit}</span>
+          <span className="font-semibold text-[rgb(var(--fg-rgb))]">{fmt(p.value)}{unit}</span>
         </div>
       ))}
     </div>
@@ -31,6 +40,7 @@ function TT({ active, payload, label, unit = '' }) {
 // 1. Cumulative growth over months — the "clearer every month" story
 export function CumulativeChart({ data, upto }) {
   const series = cumulativeSeries(data).map(d => ({ ...d, faded: d.month > upto }));
+  const { axis, grid } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={380}>
       <ComposedChart data={series} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
@@ -55,6 +65,7 @@ export function CumulativeChart({ data, upto }) {
 export function GroupStackedArea({ data }) {
   const series = groupStackedSeries(data);
   const groups = Object.keys(GROUP_COLORS).filter(g => series.some(r => r[g] > 0));
+  const { axis, grid, legend } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={380}>
       <AreaChart data={series} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
@@ -62,7 +73,7 @@ export function GroupStackedArea({ data }) {
         <XAxis dataKey="label" {...axis} />
         <YAxis {...axis} />
         <Tooltip content={<TT />} />
-        <Legend wrapperStyle={{ fontSize: 12 }} formatter={v => GROUP_SHORT[v] || v} />
+        <Legend wrapperStyle={{ fontSize: 12, color: legend }} formatter={v => GROUP_SHORT[v] || v} />
         {groups.map(g => (
           <Area key={g} type="monotone" dataKey={g} stackId="1" name={g}
             stroke={GROUP_COLORS[g]} fill={GROUP_COLORS[g]} fillOpacity={0.35} strokeWidth={2} />
@@ -78,6 +89,7 @@ export function KpiProgressBars({ data, upto }) {
     .filter(r => r.kind === 'count' && r.target)
     .map(r => ({ ...r, label: `${r.code}` }))
     .sort((a, b) => (b.pct ?? 0) - (a.pct ?? 0));
+  const { axis, grid } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={Math.max(360, rows.length * 40)}>
       <BarChart data={rows} layout="vertical" margin={{ top: 6, right: 40, left: 8, bottom: 6 }}>
@@ -98,11 +110,12 @@ export function KpiProgressBars({ data, upto }) {
 // 4. Donut per group
 export function GroupDonut({ data, upto }) {
   const rows = groupTotals(data, upto);
+  const { legend } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={380}>
       <PieChart>
         <Tooltip content={<TT />} />
-        <Legend wrapperStyle={{ fontSize: 12 }} />
+        <Legend wrapperStyle={{ fontSize: 12, color: legend }} />
         <Pie data={rows} dataKey="value" nameKey="name" innerRadius={80} outerRadius={140} paddingAngle={2} stroke="none">
           {rows.map((r, i) => <Cell key={i} fill={r.color || PALETTE[i % PALETTE.length]} />)}
         </Pie>
@@ -114,6 +127,7 @@ export function GroupDonut({ data, upto }) {
 // 5. Unit ranking
 export function UnitRanking({ data, upto, top = 14 }) {
   const rows = unitTotals(data, upto).slice(0, top);
+  const { axis, grid } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={Math.max(360, rows.length * 34)}>
       <BarChart data={rows} layout="vertical" margin={{ top: 6, right: 30, left: 8, bottom: 6 }}>
@@ -142,12 +156,13 @@ export function GroupRadar({ data, upto }) {
       group: GROUP_SHORT[g] || g,
       pct: Math.round(byGroup[g].reduce((a, b) => a + b, 0) / byGroup[g].length)
     }));
+  const { tick, tickDim, light } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={380}>
       <RadarChart data={rows} outerRadius={140}>
-        <PolarGrid stroke="rgba(255,255,255,0.12)" />
-        <PolarAngleAxis dataKey="group" tick={{ fill: 'rgba(255,255,255,0.6)', fontSize: 11 }} />
-        <PolarRadiusAxis domain={[0, 100]} tick={{ fill: 'rgba(255,255,255,0.3)', fontSize: 10 }} />
+        <PolarGrid stroke={light ? 'rgba(15,23,42,0.15)' : 'rgba(255,255,255,0.12)'} />
+        <PolarAngleAxis dataKey="group" tick={{ fill: tick, fontSize: 11 }} />
+        <PolarRadiusAxis domain={[0, 100]} tick={{ fill: tickDim, fontSize: 10 }} />
         <Tooltip content={<TT unit="%" />} />
         <Radar name="Mức hoàn thành TB" dataKey="pct" stroke="#3b82f6" fill="#3b82f6" fillOpacity={0.4} strokeWidth={2} />
       </RadarChart>
@@ -158,17 +173,18 @@ export function GroupRadar({ data, upto }) {
 // 7. Treemap per group
 export function GroupTreemap({ data, upto }) {
   const rows = groupTotals(data, upto).map(r => ({ name: r.name, size: r.value, fill: r.color }));
+  const { light } = themeColors();
   return (
     <ResponsiveContainer width="100%" height={380}>
-      <Treemap data={rows} dataKey="size" stroke="#060912" content={<TreemapCell />} />
+      <Treemap data={rows} dataKey="size" stroke={light ? '#eef1f7' : '#060912'} content={<TreemapCell gap={light ? '#eef1f7' : '#060912'} />} />
     </ResponsiveContainer>
   );
 }
-function TreemapCell({ x, y, width, height, name, size, fill }) {
+function TreemapCell({ x, y, width, height, name, size, fill, gap = '#060912' }) {
   if (width < 1 || height < 1) return null;
   return (
     <g>
-      <rect x={x} y={y} width={width} height={height} style={{ fill, stroke: '#060912', strokeWidth: 2 }} rx={6} />
+      <rect x={x} y={y} width={width} height={height} style={{ fill, stroke: gap, strokeWidth: 2 }} rx={6} />
       {width > 70 && height > 40 && (
         <>
           <text x={x + 10} y={y + 24} fill="#fff" fontSize={13} fontWeight={700}>{name}</text>

@@ -48,17 +48,17 @@ export default function AdminUsers() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-black text-white">Quản lý người dùng & phân quyền</h1>
-        <p className="mt-1 text-sm text-white/50">Super Admin gán quyền chỉnh sửa và đơn vị tương ứng cho từng Editor. Editor chỉ nhập được số liệu của đơn vị mình phụ trách.</p>
+        <h1 className="text-2xl font-black text-[rgb(var(--fg-rgb))]">Quản lý người dùng & phân quyền</h1>
+        <p className="mt-1 text-sm text-[rgb(var(--fg-rgb)_/_0.5)]">Super Admin gán quyền chỉnh sửa và đơn vị tương ứng cho từng Editor. Editor chỉ nhập được số liệu của đơn vị mình phụ trách.</p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_360px]">
         {/* Users table */}
         <div className="card overflow-hidden">
-          <div className="border-b border-white/10 px-5 py-3 text-sm font-semibold text-white/80">Danh sách người dùng ({users.length})</div>
+          <div className="border-b border-[rgb(var(--fg-rgb)_/_0.1)] px-5 py-3 text-sm font-semibold text-[rgb(var(--fg-rgb)_/_0.8)]">Danh sách người dùng ({users.length})</div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[640px] text-sm">
-              <thead className="text-xs uppercase tracking-wider text-white/40">
+              <thead className="text-xs uppercase tracking-wider text-[rgb(var(--fg-rgb)_/_0.4)]">
                 <tr>
                   <th className="px-5 py-3 text-left font-medium">Tài khoản</th>
                   <th className="px-3 py-3 text-left font-medium">Vai trò</th>
@@ -69,10 +69,10 @@ export default function AdminUsers() {
               </thead>
               <tbody>
                 {users.map(u => (
-                  <tr key={u.id} className="border-t border-white/5">
+                  <tr key={u.id} className="border-t border-[rgb(var(--fg-rgb)_/_0.05)]">
                     <td className="px-5 py-3">
-                      <div className="font-semibold text-white">{u.username}</div>
-                      <div className="text-xs text-white/45">{u.full_name}</div>
+                      <div className="font-semibold text-[rgb(var(--fg-rgb))]">{u.username}</div>
+                      <div className="text-xs text-[rgb(var(--fg-rgb)_/_0.45)]">{u.full_name}</div>
                     </td>
                     <td className="px-3 py-3">
                       {editing === u.id ? (
@@ -86,7 +86,7 @@ export default function AdminUsers() {
                         </span>
                       )}
                     </td>
-                    <td className="px-3 py-3 text-white/60">
+                    <td className="px-3 py-3 text-[rgb(var(--fg-rgb)_/_0.6)]">
                       {editing === u.id && u.role === 'editor' ? (
                         <select value={u.unit_id || ''} onChange={e => setUsers(us => us.map(x => x.id === u.id ? { ...x, unit_id: Number(e.target.value) } : x))} className="input py-1 text-xs">
                           <option value="">— Chọn —</option>
@@ -95,7 +95,7 @@ export default function AdminUsers() {
                       ) : (u.role === 'super_admin' ? '— (toàn quyền)' : (u.unit_code || '—'))}
                     </td>
                     <td className="px-3 py-3 text-center">
-                      <span className={`chip text-[11px] ${u.active ? 'bg-emerald-500/15 text-emerald-300' : 'bg-white/10 text-white/40'}`}>{u.active ? 'Hoạt động' : 'Khóa'}</span>
+                      <span className={`chip text-[11px] ${u.active ? 'bg-emerald-500/15 text-emerald-300' : 'bg-[rgb(var(--fg-rgb)_/_0.1)] text-[rgb(var(--fg-rgb)_/_0.4)]'}`}>{u.active ? 'Hoạt động' : 'Khóa'}</span>
                     </td>
                     <td className="px-3 py-3 text-right">
                       <div className="flex justify-end gap-1.5 text-xs">
@@ -122,7 +122,7 @@ export default function AdminUsers() {
 
         {/* Create form */}
         <div className="card h-fit p-6">
-          <div className="mb-4 text-sm font-bold text-white">Thêm người dùng mới</div>
+          <div className="mb-4 text-sm font-bold text-[rgb(var(--fg-rgb))]">Thêm người dùng mới</div>
           <form onSubmit={create} className="space-y-3">
             <div>
               <label className="label mb-1 block">Tên đăng nhập</label>
@@ -158,7 +158,7 @@ export default function AdminUsers() {
       </div>
 
       {toast && (
-        <div className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-xl px-4 py-2.5 text-sm font-medium shadow-xl ${toast.isErr ? 'bg-red-500 text-white' : 'bg-emerald-500 text-white'}`}>{toast.msg}</div>
+        <div className={`fixed bottom-6 left-1/2 z-50 -translate-x-1/2 rounded-xl px-4 py-2.5 text-sm font-medium shadow-xl ${toast.isErr ? 'bg-red-500 text-[rgb(var(--fg-rgb))]' : 'bg-emerald-500 text-[rgb(var(--fg-rgb))]'}`}>{toast.msg}</div>
       )}
     </div>
   );
